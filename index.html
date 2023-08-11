@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hola!!</title>    
+    <link rel="stylesheet" href="Css/estilo.css">    
+</head>
+
+<body>
+    <!--Sección Menu-->   
+    <section class="top-nav"> 
+        <input id="menu-toggle" type="checkbox">
+    <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+    </label>    
+                <ul class="menu">                    
+                    <li><a href="#inicio"onclick="seleccionar()">Inicio</a></li>
+                    <li><a href="#sobremi"onclick="seleccionar()">Sobremi</a></li>
+                    <li><a href="#skills"onclick="seleccionar()">Skills</a></li>
+                    <li><a href="#curriculum"onclick="seleccionar()">Curriculum</a></li>
+                    <li><a href="#porfolio"onclick="seleccionar()">Porfolio</a></li>
+                    <li><a href="#contacto"onclick="seleccionar()">Contacto</a></li>
+                </ul>            
+    </section>    
+
+    <!--Sección Inicio-->
+    <seccion id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/Img personal.jpeg" alt="">
+            </div>
+            <h1>Soledad Baldrich</h1>
+            <h2>Desarrollador Web Front-End Junior</h2>
+            <div class="redes">
+                <a href="#"data-red-social="Facebook" onclick="mostrarMensaje(event)"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"data-red-social="Twitter" onclick="mostrarMensaje(event)"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/soledad-baldrich-006680268/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Solcito22"><i class="fa-brands fa-github"></i></a>
+                <a href="#"data-red-social="Instagram"onclick="mostrarMensaje(event)"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>            
+        </div>        
+    </seccion>
+
+    <!--Sobre Mi-->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mi</h2>
+            <p><strong>Hola!!, querés conocer un poco de mi...te cuento...</strong></p>
+                <p>Desde que comencé a aprender con diferentes cursos y continuar en forma autodidacta con el mundo de la programación, mi pasión por el desarrollo web ha ido en constante aumento. Con cada línea de código que escribía, descubría un mundo lleno de posibilidades y creatividades, adquiriendo habilidades sólidas en el desarrollo front-end y back-end</p>
+                <p>Mi camino autodidacta me ha brindado la libertad de explorar una amplia variedad de tecnologías, frameworks y herramientas. Me siento cómoda trabajando con HTML, CSS y JavaScript, y he utilizado frameworks como React y Express.js para construir aplicaciones web modernas y robustas.</p>
+                <p>Lo que más me emociona del desarrollo web es la capacidad de dar vida a ideas y convertirlas en experiencias interactivas. Mi enfoque se centra en el usuario, y siempre busco mejorar la calidad en mis proyectos.</p>               
+                <p>Dentro de mi porfolio, encontrarás una colección de mis proyectos más significativos. Cada uno de ellos representa un desafío superado y una oportunidad para crecer como profesional. Estoy orgulloso de la evolución que he experimentado a lo largo de mi trayectoria autodidacta y estoy ansioso por enfrentar nuevos retos y seguir aprendiendo cada día.</p>           
+                <p>Si estás buscando un desarrollador web autodidacta con pasión, determinación y una fuerte ética de trabajo, no dudes en explorar mi porfolio para descubrir cómo puedo contribuir al éxito de tu próximo proyecto. <strong>"¡Espero que disfrutes explorando mis trabajos tanto como yo disfruté creándolos!"</p></strong>
+            <div class="fila">
+
+                <!--datos personales-->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <div class="datos">
+                        <div>
+                            <strong>Cumpleaños</strong>
+                            <p>12-06-1981</p>
+                        </div>
+                        <div>
+                            <strong>Teléfono</strong>
+                            <p>
+                                <a href="https://api.whatsapp.com/send?phone=541555038397" onclick="redirigirContacto('tel')">                                
+                                    <i class="fa-brands fa-whatsapp"></i>                            
+                                </a>
+                            </p>
+                        </div>
+                        <div>
+                            <strong>Email</strong>
+                            <p>
+                                <a href="#contacto" onclick="mostrarMensaje()">
+                                <i class="fa-solid fa-envelope"></i><span>Enviar Email</span>
+                                </a>
+                            </p>
+                        </div>
+                        <div>
+                            <strong>Website</strong>
+                            <p class="próximamente">"Próximamente"</p>
+                        </div>
+                        <div>
+                            <strong>Dirección:</strong>
+                            <p>CABA, Argentina.</p>
+                        </div>
+                        <div>
+                            <strong>Cargo:</strong>
+                            <p><strong>Desarrollador Web Front-End Junior</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--intereses-->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>Música</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-skating"></i>
+                            <span>Patinar</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>Viajar</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <span>Deportes</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Libros</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>Fotos</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-language"></i>
+                            <span>Idiomas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button>
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>                  
+    </section>
+
+    <!--Seccion Skills-->
+    <seccion id="skills" class="skills" >
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!--Technical skills-->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>SQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Bootstrap</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+        <div class="skill">
+            <span>Illustrator</span>
+            <div class="barra-skill">
+                <div class="progreso">
+                    <span>65%</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>Photoshop</span>
+            <div class="barra-skill">
+                <div class="progreso">
+                    <span>65%</span>
+                </div>
+            </div>
+        </div>
+            </div>    
+
+        <!--Professional Skills-->
+        <div class="col">
+            <h3>Professional Skills</h3>
+            <div class="skill">
+                <span>Autodidacta</span>
+                <div class="barra-skill">
+                    <div class="progreso">
+                    <span>100%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Comunicación</span>
+                <div class="barra-skill">
+                    <div class="progreso">
+                    <span>85%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Trabajo en Equipo</span>
+                <div class="barra-skill">
+                    <div class="progreso">
+                    <span>90%</span>
+                    </div>
+                </div>
+            </div>            
+            <div class="skill">
+                <span>Resolutivo</span>
+                <div class="barra-skill">
+                    <div class="progreso">
+                    <span>85%</span>
+                    </div>
+                </div>
+            </div>            
+            <div class="skill">
+                <span>Dedicación</span>
+                <div class="barra-skill">
+                    <div class="progreso">
+                    <span>90%</span>
+                    </div>
+                </div>
+            </div>            
+            <div class="skill">
+                <span>Compromiso</span>
+                <div class="barra-skill">
+                    <div class="progreso">
+                    <span>90%</span>
+                    </div>
+                </div>
+            </div>                
+        </div>
+        </div>
+        </div>         
+    </seccion>
+
+    <!--Seccion Curriculum-->
+    <seccion id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h1>Curriculum</h1>
+            <div class="fila">                
+                    <h3>Educación</h3>                    
+                        <h4>Desarrollador Java Intermedio</h4>
+                        <span class="casa">Universidad Tecnológica Nacional</span>
+                        <span class="fecha">06-2023</span>
+                        <p>Mi experiencia intermedia en Java me ha permitido dominar conceptos fundamentales como programación orientada a objetos, manejo de excepciones y colecciones.</p>
+                        <p>Estoy dispuesto a enfrentar nuevos retos y proyectos emocionantes.</p>
+            </div>
+                <div class="fila">         
+                    <h4>Javascript</h4>                    
+                    <span class="casa">Educación IT</span>
+                    <span class="fecha">05-2023 / 07-2023</span>
+                    <p>Mi sólida experiencia en Javadcript me ha permitido aplicar pequeñas funcionalidades a mis proyectos para hacerlas creativas y efectivas. Además, me entusiasma la oportunidad de trabajar con frameworks y librerías relacionadas con JavaScript, como React y Node.js, para mejorar aún más mis habilidades y expandir mi conjunto de herramientas.</p>
+                    <p>Estoy dispuesto a enfrentar nuevos retos y proyectos emocionantes.</p>
+                </div>
+            <div class="fila"> 
+                        <h4>Desarrollador Java Inicial</h4>
+                        <span class="casa">Universidad Tecnológica Nacional</span>
+                        <span class="fecha">01-2023 / 05-2023</span>
+                        <p>Durante mi aprendizaje, me he sumergido en los fundamentos esenciales del lenguaje Java y he adquirido una sólida base para desarrollar aplicaciones simples y funcionales.</p>
+                        <p>En el curso de Java inicial, he aprendido los conceptos básicos de programación, como variables, condicionales, bucles y funciones. También he explorado los principios de la programación orientada a objetos y he utilizado clases y objetos para crear programas más estructurados y modulares.</p>
+            </div>
+            <div class="fila">
+                        <h4>Introducción a Base de Datos y SQL</h4>
+                        <span class="casa">Educación IT</span>
+                        <span class="fecha">02-2023 / 04-2023</span>
+                        <p>En este curso he adquirido conocimientos fundamentales sobre cómo gestionar y manipular datos de manera eficiente, utilizando estructura de tablas, tipos de datos, claves primarias y foráneas, y las relaciones entre las entidades.<p>He utilizado SQL (Structured Query Language) para crear, modificar y consultar bases de datos, lo que me ha permitido interactuar con los datos y realizar operaciones esenciales.</p><p>Además, he aprendido a diseñar consultas para recuperar información específica de una base de datos y a utilizar cláusulas como SELECT, FROM, WHERE, JOIN y ORDER BY para filtrar y ordenar datos según las necesidad.</p>
+            </div>
+            <div class="fila">
+                        <h4>Desarrollo Web con HTML y CSS</h4>
+                        <span class="casa">Educación IT</span>
+                        <span class="fecha">10-2022 / 12-2022</span>
+                        <p>Mi experiencia por el mundo del desarrollo web fue emocionante, en donde aprendí a crear páginas web y diseñar su apariencia.</p>
+                        <p>En el camino de la introducción a HTML, he comprendido los conceptos esenciales de la estructura de una página web. He aprendido a utilizar etiquetas HTML para crear encabezados, párrafos, listas, enlaces, imágenes y otros elementos que conforman el contenido de una página. Además, he utilizado atributos para dar formato y agregar información adicional a los elementos.</p>
+                        <p>Mediante pequeños proyectos prácticos, he tenido la oportunidad de aplicar mis conocimientos en HTML y CSS para crear páginas web simples y funcionales. He diseñado diseños atractivos y responsivos para garantizar una experiencia agradable para los usuarios.</p>
+            </div>
+            <div class="fila">
+                        <h4>Introducción a la Programación</h4>
+                        <span class="casa">Educación IT</span>
+                        <span class="fecha">07-2022 / 09-2022</span>
+                        <p>Durante mis primeros pasos en el emocionante mundo de la programación, he adquirido valiosos conocimientos que me han abierto las puertas a un nuevo universo de posibilidades creativas y técnicas.</p><p>Aprendí conceptos fundamentales, como variables, estructuras de control (condicionales y bucles), funciones y algoritmos. He utilizado diferentes lenguajes de programación para resolver problemas y desarrollar pequeños proyectos, lo que me ha permitido entender la lógica detrás de la escritura de código.<p>
+                            Además, he descubierto el poder de la programación orientada a objetos, donde he aprendido a crear clases, objetos y métodos para organizar y reutilizar código de manera eficiente.</p>         
+                            <p>A través de la solución de problemas y desafíos prácticos, he desarrollado habilidades de pensamiento lógico y analítico, lo que me ha permitido abordar los problemas de manera estructurada y encontrar soluciones eficaces.</p>
+            </div>
+            <div class="fila"> 
+                    <h3>Certificados de Estudios</h3>
+                    <h4>Desarrollador Java Intermedio</h4>
+                        <span class="casa">Universidad Tecnológica Nacional</span>
+                        <span class="fecha">Junio 2023</span>
+                        <a href="Certificate/Certificado de finalización curso Java.pdf" target="_blank">Ver Certificado</a>
+            </div>
+            <div class="fila"> 
+                    <h4>Javascript</h4>
+                    <span class="casa">Educación IT</span>
+                    <span class="fecha">05-2023 / 07-2023</span>
+                    <a href="Certificate/Certificado-Javascript-desde-cero-EducaciónIT.pdf" target="_blank">Ver Certificado</a>
+        </div>
+            <div class="fila">                    
+                        <h4>Desarrollador Java Inicial</h4>
+                        <span class="casa">Universidad Tecnológica Nacional</span>
+                        <span class="fecha">Enero 2023 / Mayo 2023</span>
+                        <a href="Certificate/Certificado de finalización curso Java.pdf" target="_blank">Ver Certificado</a>
+            </div>
+            <div class="fila"> 
+                        <h4>Introducción a Base de Datos y SQL</h4>
+                        <span class="casa">Educación IT</span>
+                        <span class="fecha">Febrero 2023 / Abril 2023</span>
+                        <a href="Certificate/Certificado EducaciónIT Introduccion Base de Datos y SQL.pdf" target="_blank">Ver Certificado</a>
+            </div>
+            <div class="fila">
+                        <h4>Desarrollo Web con HTML y CSS</h4>
+                        <span class="casa">Educación IT</span>
+                        <span class="fecha">Octubre 2022 / Diciembre 2022</span>
+                        <a href="Certificate/Certificado EducaciónIT Desarrollo Web con HTML.pdf" target="_blank">Ver Certificado</a>
+            </div>
+            <div class="fila">
+                        <h4>Introducción a la Programación</h4>
+                        <span class="casa">Educación IT</span>
+                        <span class="fecha">Julio 2022 / Septiembre 2022</span>
+                        <a href="Certificate/Certificado EducaciónIT Introduccion a la Programacion.pdf" target="_blank">Ver Certificado</a>
+            </div>
+        </div>        
+    </seccion>
+
+    <!--Seccion Porfolio-->
+    <section id="porfolio" class="porfolio">
+        <form id="formulario-de-contacto">
+        <div class="contenido-seccion">
+            <h2>Porfolio</h2>
+            <div class="galeria">
+                <div class="proyecto">                     
+                    <video src="Practicas/Grabación calculadora.mp4" controls></video> 
+                    <div class="overlay">
+                        <h3>Calculadora</h3>
+                        <p>Video de una calculadora en acción</p>                        
+                    </div>                    
+                </div>
+                <div class="proyecto">
+                    <video src="Practicas/Juego pieda-papel o tijera/Grabación juego.mp4" controls></video>
+                    <div class="overlay">
+                        <h3>Piedra Papel o Tijera</h3>
+                        <p>funcionamiento del juego</p>                        
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <video src="Practicas/Error page/Grabación Error 404.mp4"controls></video>
+                    <div class="overlay">
+                        <h3>Error Page 404</h3>
+                        <p>Video cuando muestra el error</p>                        
+                    </div>
+                </div>
+            </div>            
+        </div>
+        </form>
+    </section>
+
+    <!--Seccion Contacto-->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!--Formulario-->
+                <div class="col">
+                    <label for="telefono">Número telefónico*</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Número telefónico" pattern="[0-9]{9,15}" required>
+
+                <label for="correo">Dirección de correo*</label>                
+                <input type="email" id="correo" name="correo" placeholder="Dirección de correo" required>
+
+                <label for="tema">Tema</label>
+                <input type="text" id="tema" name="tema" placeholder="Tema" required>
+
+                <label for="mensaje">Mensaje*</label>
+                <textarea id="mensaje" name="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+
+                <button type="submit">
+                    Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                    <span class="overlay"></span>
+                </button>
+            </div>
+                <!--Mapa-->
+                <div class="col">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.263171905741!2d-58.49547219071505!3d-34.59750615705383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb63b0e7c6a37%3A0xe9f1681ee913a627!2sSimbr%C3%B3n%202900%2C%20C1417EUB%20CABA!5e0!3m2!1ses-419!2sar!4v1689873947992!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <span class="Dirección">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Simbrón 2900, C1417EUB CABA
+                                </span>
+                            </li>
+                            <li>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+        </div>        
+    </section>
+
+    <!--Seccion Footer-->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i>></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        </div> 
+    </footer>
+
+    <!--Scripts-->
+    <script src="Javascript/script.js"></script>
+</body>
+</html>
